@@ -34,6 +34,9 @@ use App\Http\Controllers\NoteController;
 // Create a new note
 Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
 
+// Store a new note (use the POST method for storing)
+Route::post('/notes', [NoteController::class, 'store'])->name('notes.store');
+
 // List all notes
 Route::get('/notes', [NoteController::class, 'index'])->name('notes.index');
 

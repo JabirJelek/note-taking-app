@@ -15,6 +15,18 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')">
+                        {{ __('Notes Index') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('notes.create')" :active="request()->routeIs('notes.create')">
+                        {{ __('Notes Create') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('notes.show', ['note' => 1])" :active="request()->routeIs('notes.show')">
+                        {{ __('Notes Show') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('notes.edit', ['note' => 1])" :active="request()->routeIs('notes.edit')">
+                        {{ __('Notes Edit') }}
+                    </x-nav-link>
                 </div>
             </div>
 
