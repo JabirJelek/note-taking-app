@@ -28,4 +28,19 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+use App\Http\Controllers\NoteController;
+
+// Create a new note
+Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
+
+// List all notes
+Route::get('/notes', [NoteController::class, 'index'])->name('notes.index');
+
+// View a specific note
+Route::get('/notes/{note}', [NoteController::class, 'show'])->name('notes.show');
+
+// Edit a note
+Route::get('/notes/{note}/edit', [NoteController::class, 'edit'])->name('notes.edit');
+
 require __DIR__.'/auth.php';
