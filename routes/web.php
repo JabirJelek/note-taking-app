@@ -46,4 +46,8 @@ Route::get('/notes/{note}', [NoteController::class, 'show'])->name('notes.show')
 // Edit a note
 Route::get('/notes/{note}/edit', [NoteController::class, 'edit'])->name('notes.edit');
 
+// Add a route for deleting a note
+Route::delete('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy');
+
+
 require __DIR__.'/auth.php';

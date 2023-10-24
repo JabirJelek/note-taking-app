@@ -14,7 +14,7 @@
                     <ul class="mt-4 space-y-4">
                         @foreach ($notes as $note)
                             <li class="border rounded p-4">
-                                <h2 class="text-xl font-semibold">{{ $note->title }}</h2>
+                                <h2 class="text-xl font-semibold text-white">{{ $note->title }}</h2>
                                 <p class="text-gray-600 dark:text-gray-400">{{ $note->content }}</p>
                             </li>
                         @endforeach

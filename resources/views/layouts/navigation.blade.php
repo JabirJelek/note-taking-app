@@ -27,6 +27,9 @@
                     <x-nav-link :href="route('notes.edit', ['note' => 1])" :active="request()->routeIs('notes.edit')">
                         {{ __('Notes Edit') }}
                     </x-nav-link>
+                    {{-- <x-nav-link :href="route('notes.destroy', ['note' => 1])" :active="request()->routeIs('notes.destroy')">
+                        {{ __('Delete Note') }} 
+                    </x-nav-link> --}}
                 </div>
             </div>
 
